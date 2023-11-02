@@ -9,15 +9,10 @@
  */
 bst_t *array_to_bst(int *array, size_t size)
 {
+	unsigned int b;
 	bst_t *root_node = NULL;
 
-	if (size == 0) 
-	{
-		return (NULL);
-	}
-	for (size_t i = 0; i < size; i++) 
-	{
-		bst_insert(&root_node, array[i]);
-	}
+	for (b = 0; b < size; b++)
+		bst_insert(&root_node, array[b]);
 	return (root_node);
 }
